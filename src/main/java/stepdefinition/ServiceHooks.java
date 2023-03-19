@@ -7,9 +7,8 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import java.net.MalformedURLException;
 
-import static core.SeleniumPage.closeDriver;
+
 import static core.SeleniumPage.navigateUrl;
 
 public class ServiceHooks{
@@ -23,8 +22,8 @@ public class ServiceHooks{
     public void afterHooks(Scenario scenario){
         if(scenario.isFailed()){
             scenario.attach(((TakesScreenshot)SeleniumPage.driver).getScreenshotAs(OutputType.BYTES),
-                    "image/png", "imageDemo");
+                    "src/test/resources/data", "imageDemo/png");
         }
-        closeDriver();
+//        closeDriver();
     }
 }

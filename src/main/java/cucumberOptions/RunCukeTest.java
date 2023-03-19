@@ -1,8 +1,5 @@
 package cucumberOptions;
-//import io.cucumber.*
-//import io.cucumber.testng.FeatureWrapper;
-//import io.cucumber.testng.PickleWrapper;
-//import io.cucumber.testng.TestNGCucumberRunner;
+
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;

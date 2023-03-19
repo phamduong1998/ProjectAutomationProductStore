@@ -14,11 +14,8 @@ public class SeleniumPage {
 
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
-    public static Alert alerts;
 
 
-
-//    @Test
     public static void navigateUrl(){
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
@@ -41,10 +38,13 @@ public class SeleniumPage {
     }
 
     public static void acceptAlert(){
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        Alert alerts = driver.switchTo().alert();
+        alerts.accept();
     }
 
+    public static void waitElement(int timeout) throws InterruptedException {
+        Thread.sleep(timeout);
+    }
 
 
 
