@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 import static core.SeleniumPage.navigateUrl;
 
-public class ServiceHooks{
+public class ServiceHooks extends SeleniumPage{
 
     @Before
     public void initTest(){
@@ -24,6 +24,6 @@ public class ServiceHooks{
             scenario.attach(((TakesScreenshot)SeleniumPage.driver).getScreenshotAs(OutputType.BYTES),
                     "src/test/resources/data", "imageDemo/png");
         }
-//        closeDriver();
+        closeDriver();
     }
 }
