@@ -7,7 +7,7 @@ public class PurchaseSteps {
 
     PurchasePage purchasePage = new PurchasePage();
 
-    @When("I purchase galaxy s6 with {string} and {string}, {string}, {string}, {string}")
+    @When("I purchase galaxy s6 with {string} and {string}, {string}, {string}, {string}, {string}")
     public void purchaseProduct( String nameCustomer,
                                  String country,
                                  String cityCustomer,

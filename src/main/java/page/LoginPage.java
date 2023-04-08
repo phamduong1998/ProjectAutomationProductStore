@@ -7,7 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends SeleniumPage {
     public LoginPage (){
-//        driver = driver;
         PageFactory.initElements(driver,this);
     }
 

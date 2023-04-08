@@ -43,6 +43,9 @@ public class PurchasePage extends SeleniumPage {
     @FindBy(xpath = "//button[normalize-space()='Purchase']")
     private static WebElement btnPurchase;
 
+    @FindBy(xpath = "//button[contains(text(),'OK')]")
+    private static WebElement btnConfirm;
+
     public void purchaseGlaxyS6(
             String nameCustomer,
             String country,
@@ -61,6 +64,7 @@ public class PurchasePage extends SeleniumPage {
                 creditCard,
                 monthByProduct,
                 yearByProduct);
+        clickBtnConfirm();
     }
 
     private void clickProductGalaxyS6() throws InterruptedException {
@@ -113,6 +117,8 @@ public class PurchasePage extends SeleniumPage {
         clickElement(btnPurchase);
 
 
-
+    }
+    private void clickBtnConfirm(){
+        clickElement(btnConfirm);
     }
 }

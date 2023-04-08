@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 
 import static core.SeleniumPage.navigateUrl;
 
-public class ServiceHooks{
+public class ServiceHooks extends SeleniumPage{
 
     @Before
     public void initTest(){
@@ -25,5 +25,6 @@ public class ServiceHooks{
                     "src/test/resources/data", "imageDemo/png");
         }
 //        closeDriver();
+
     }
 }

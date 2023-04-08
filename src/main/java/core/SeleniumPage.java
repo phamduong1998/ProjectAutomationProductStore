@@ -15,7 +15,6 @@ public class SeleniumPage {
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
 
-
     public static void navigateUrl(){
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
@@ -23,7 +22,6 @@ public class SeleniumPage {
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
-
     public static void closeDriver(){
         driver.close();
     }
@@ -45,7 +43,5 @@ public class SeleniumPage {
     public static void waitElement(int timeout) throws InterruptedException {
         Thread.sleep(timeout);
     }
-
-
 
 }
