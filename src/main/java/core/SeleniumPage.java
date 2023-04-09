@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -17,6 +18,7 @@ public class SeleniumPage {
 
 
     public static void navigateUrl(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/data/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
         driver.manage().window().maximize();
