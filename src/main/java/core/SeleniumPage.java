@@ -1,5 +1,6 @@
 package core;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +13,13 @@ import java.time.Duration;
 
 public class SeleniumPage {
 
-    public static WebDriver driver;
+    public static ChromeDriver driver;
     public static WebDriverWait webDriverWait;
 
     public static void navigateUrl(){
+        WebDriverManager.chromedriver().clearResolutionCache();
+        WebDriverManager.chromedriver().setup();
+        // Khởi tạo ChromeDriver
         driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
         driver.manage().window().maximize();

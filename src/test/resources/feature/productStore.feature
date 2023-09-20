@@ -8,4 +8,4 @@ Feature: Feature Product Store
     When I purchase galaxy s6 with "<customerName>" and "<country>", "<cityCustomer>", "<creditCard>", "<monthByProduct>", "<yearByProduct>"
     Examples:
       |userName|password|customerName |country|cityCustomer|creditCard|monthByProduct|yearByProduct|
-      |Hailinh|123456   |Linh xinh gái|Độc lạ |Bình Dương  |  2803200 |3             |  2020       |
+      |Hailinh|123456   |Linh |Viet Nam |Hà Nội |  2803200 |3             |  2020       |
