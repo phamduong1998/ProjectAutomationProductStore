@@ -29,4 +29,9 @@ public class LoginPage extends SeleniumPage {
         clickElement(btnLogin);
     }
 
+    public String getMessage() throws InterruptedException {
+        waitElement(5000);
+        return getTextAlert();
+    }
+
 }

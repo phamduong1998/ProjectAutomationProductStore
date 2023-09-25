@@ -44,6 +44,14 @@ public class SeleniumPage {
         alerts.accept();
     }
 
+    public static String getTextAlert(){
+        Alert alerts = driver.switchTo().alert();
+
+        String message = alerts.getText();
+        alerts.accept();
+        return message;
+    }
+
     public static void waitElement(int timeout) throws InterruptedException {
         Thread.sleep(timeout);
     }

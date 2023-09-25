@@ -24,7 +24,7 @@ public class ServiceHooks extends SeleniumPage{
             scenario.attach(((TakesScreenshot)SeleniumPage.driver).getScreenshotAs(OutputType.BYTES),
                     "src/test/resources/data", "imageDemo/png");
         }
-//        closeDriver();
+        closeDriver();
 
     }
 }
