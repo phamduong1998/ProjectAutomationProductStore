@@ -8,4 +8,6 @@ public class Constant {
 
     public static String PASS_WORD = "";
 
+    public static String TITLE = "";
+
 }

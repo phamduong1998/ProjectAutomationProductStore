@@ -1,5 +1,6 @@
 package page;
 
+import core.Constant;
 import core.SeleniumPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,7 +28,13 @@ public class RegisterPage extends SeleniumPage {
         sendKeys(passWord,inpuePassWord);
         clickElement(buttonRegister);
         waitElement(5000);
-        acceptAlert();
+        Constant.MESSAGE = getTextAlert();
 
+
+
+    }
+
+    public String getMessageRegisterUser(){
+        return getTextAlert();
     }
 }

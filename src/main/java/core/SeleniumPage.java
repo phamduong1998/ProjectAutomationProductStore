@@ -24,6 +24,10 @@ public class SeleniumPage {
         driver.get("https://www.demoblaze.com/index.html");
         driver.manage().window().maximize();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Constant.TITLE = driver.getTitle();
+
+        // In tiêu đề ra màn hình
+        System.out.println("Tiêu đề trang web là: " + Constant.TITLE);
 
     }
     public static void closeDriver(){
@@ -37,6 +41,10 @@ public class SeleniumPage {
     public static void clickElement(WebElement element){
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
         element.click();
+    }
+
+    public boolean checkElementIsDisplayed(WebElement element){
+        return element.isDisplayed();
     }
 
     public static void acceptAlert(){

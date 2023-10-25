@@ -1,5 +1,6 @@
 package stepdefinition;
 
+import core.Constant;
 import core.SeleniumPage;
 
 import io.cucumber.java.After;
@@ -24,6 +25,9 @@ public class ServiceHooks extends SeleniumPage{
             scenario.attach(((TakesScreenshot)SeleniumPage.driver).getScreenshotAs(OutputType.BYTES),
                     "src/test/resources/data", "imageDemo/png");
         }
+        Constant.USER_NAME = "";
+        Constant.PASS_WORD = "";
+        Constant.MESSAGE = "";
         closeDriver();
 
     }

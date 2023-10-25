@@ -3,6 +3,8 @@ package stepdefinition;
 import Utils.RanDomUtils;
 import core.Constant;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import org.testng.Assert;
 import page.LoginPage;
 import page.RegisterPage;
 
@@ -21,12 +23,23 @@ public class RegisterSteps {
         if (password.equals("Random")) {
             Constant.PASS_WORD = RanDomUtils.generateRandomUsername(10);
         }
-        registerPage.registerUser(Constant.USER_NAME,Constant.PASS_WORD);
+        if(userName.equals("Random") || password.equals("Random")){
+            registerPage.registerUser(Constant.USER_NAME,Constant.PASS_WORD);
+        }else{
+            registerPage.registerUser(userName,password);
+        }
+
 
     }
 
     @Given("I login with user registed")
     public void login(){
         loginPage.login(Constant.USER_NAME,Constant.PASS_WORD);
+    }
+
+    @Then("I should see message register {string}")
+    public void verifyRegistedEmptyUserNamePassword(String expectMessage){
+
+        Assert.assertEquals(Constant.MESSAGE,expectMessage);
     }
 }

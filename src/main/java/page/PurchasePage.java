@@ -69,6 +69,7 @@ public class PurchasePage extends SeleniumPage {
             String monthByProduct,
             String yearByProduct
     ) throws InterruptedException {
+        waitElement(5000);
         clickProductGalaxyS6();
         clickBtnAddToCard();
         clicBtnBtnCart();
@@ -88,7 +89,7 @@ public class PurchasePage extends SeleniumPage {
     }
 
     private void clickProductGalaxyS6() throws InterruptedException {
-        waitElement(5000);
+
         clickElement(productGalaxyS6);
     }
 
